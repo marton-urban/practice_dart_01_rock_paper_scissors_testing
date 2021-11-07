@@ -24,19 +24,19 @@ void main() {
       });
     });
     group('Win', () {
-      test('rock vs rock -> result = "draw"', () {
+      test('rock vs rock -> result = "win"', () {
         playerMove = Move.rock;
         aiMove = Move.scissors;
         evaluateMoves();
         expect(result, "win");
       });
-      test('paper vs paper -> result = "draw"', () {
+      test('paper vs paper -> result = "win"', () {
         playerMove = Move.paper;
         aiMove = Move.rock;
         evaluateMoves();
         expect(result, "win");
       });
-      test('scissors vs scissors -> result = "draw"', () {
+      test('scissors vs scissors -> result = "win"', () {
         playerMove = Move.scissors;
         aiMove = Move.paper;
         evaluateMoves();
@@ -44,19 +44,19 @@ void main() {
       });
     });
     group('Lose', () {
-      test('rock vs rock -> result = "draw"', () {
+      test('rock vs rock -> result = "lose"', () {
         playerMove = Move.rock;
         aiMove = Move.paper;
         evaluateMoves();
         expect(result, "lose");
       });
-      test('paper vs paper -> result = "draw"', () {
+      test('paper vs paper -> result = "lose"', () {
         playerMove = Move.paper;
         aiMove = Move.scissors;
         evaluateMoves();
         expect(result, "lose");
       });
-      test('scissors vs scissors -> result = "draw"', () {
+      test('scissors vs scissors -> result = "lose"', () {
         playerMove = Move.scissors;
         aiMove = Move.rock;
         evaluateMoves();
